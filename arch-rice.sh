@@ -1,7 +1,7 @@
 #!/bin/sh
 
 # Variables
-PACKAGES="base-devel xorg xorg-xinit doas vim xf86-video-$VIDEO dunst neovim zsh stow exa zip unzip unclutter pcmanfm htop firefox gimp mpv zsh-syntax-highlighting sl virtualbox virtualbox-host-modules-arch pulseaudio pulsemixer lutris feh steam rxvt-unicode"
+PACKAGES="base-devel xorg xorg-xinit doas vim xorg-drivers dunst neovim zsh stow exa zip unzip unclutter pcmanfm htop firefox gimp mpv zsh-syntax-highlighting sl virtualbox virtualbox-host-modules-arch pulseaudio pulsemixer lutris feh steam rxvt-unicode"
 AUR_PACKAGES="pfetch"
 GIT_DWM="https://gitlab.com/squareboi104/dwm.git"
 GIT_SLSTATUS="https://gitlab.com/squareboi104/slstatus.git"
@@ -12,8 +12,8 @@ STOW_DOTFILES="alacritty fonts nvim tabliss wallpapers xprofile dunst icons neof
 
 # Get packages
 pacman -Syu &&
-pacman -S fzf &&
-VIDEO=$(echo -e "amd-gpu\nati\ndummy\nfbdev\nintel\nnouveau\nopenchrome\nqxl\nsisusb\nvesa\nvmware\nvoodoo" | fzf) # Select video card
+#pacman -S fzf &&
+#VIDEO=$(echo -e "amd-gpu\nati\ndummy\nfbdev\nintel\nnouveau\nopenchrome\nqxl\nsisusb\nvesa\nvmware\nvoodoo" | fzf) # Select video card
 pacman -S $PACKAGES &&
 
 # Get dotfiles and WM
@@ -42,4 +42,4 @@ else
 fi
 
 # Finish
-echo "\nRebooting..." && sleep 5 && sudo reboot
+echo -e "\nRebooting..." && sleep 5 && sudo reboot
