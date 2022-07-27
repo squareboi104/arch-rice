@@ -11,10 +11,10 @@ GIT_YAY="https://aur.archlinux.org/yay.git"
 STOW_DOTFILES="alacritty fonts nvim tabliss wallpapers xprofile dunst icons neofetch qtile rofi urxvt xinitrc zshrc"
 
 # Get packages
-pacman -Syu &&
-#pacman -S fzf &&
+sudo pacman -Syu &&
+#sudo pacman -S fzf &&
 #VIDEO=$(echo -e "amd-gpu\nati\ndummy\nfbdev\nintel\nnouveau\nopenchrome\nqxl\nsisusb\nvesa\nvmware\nvoodoo" | fzf) # Select video card
-pacman -S $PACKAGES &&
+sudo pacman -S $PACKAGES &&
 
 # Get dotfiles and WM
 mkdir $HOME/.dwm/ &&
@@ -22,11 +22,14 @@ git clone $GIT_DWM $HOME/.dwm/dwm && cd $HOME/.dwm/dwm/ && sudo make clean insta
 git clone $GIT_SLSTATUS $HOME/.dwm/slstatus && cd $HOME/.dwm/slstatus/ && sudo make clean install &&
 git clone $GIT_DMENU $HOME/.dwm/dmenu && cd $HOME/.dwm/dmenu/ && sudo make clean install &&
 git clone $GIT_DOTFILES $HOME/.dotfiles/ && cd $HOME/.dotfiles/ && stow $STOW_DOTFILES &&
-git clone $GIT_YAY $HOME/yay && cd $HOME/yay/ && sudo makepkg -si && yay pfetch && rm -rf $HOME/yay/
+git clone $GIT_YAY $HOME/yay && cd $HOME/yay/ && makepkg -si && yay pfetch && rm -rf $HOME/yay/
 
 # Change shell
 echo "Changing shell:"
-chsh -s /usr/bin/zsh
+sudo chsh -s /usr/bin/zsh
+
+# Config doas
+echo "permit persist :wheel"
 
 # Del files
 read -rp "Do you want to delete th WM config files? [Y/n]: " do
@@ -34,7 +37,7 @@ read -rp "Do you want to delete th WM config files? [Y/n]: " do
 if [do == "y"]; then
     rm -rf $HOME/.dwm/
     echo "Deleting..."
-elif
+elif [do == "no"]; then
     echo "Not deleting anyting."
 else
     rm -rf $HOME/.dwm/
