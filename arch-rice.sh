@@ -13,7 +13,7 @@ STOW_DOTFILES="alacritty fonts nvim tabliss wallpapers xprofile dunst icons neof
 # Get packages
 pacman -Syu &&
 pacman -S fzf &&
-VIDEO=$(echo "amd-gpu\nati\ndummy\nfbdev\nintel\nnouveau\nopenchrome\nqxl\nsisusb\nvesa\nvmware\nvoodoo" | fzf) # Select video card
+VIDEO=$(echo -e "amd-gpu\nati\ndummy\nfbdev\nintel\nnouveau\nopenchrome\nqxl\nsisusb\nvesa\nvmware\nvoodoo" | fzf) # Select video card
 pacman -S $PACKAGES &&
 
 # Get dotfiles and WM
