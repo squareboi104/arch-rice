@@ -13,10 +13,12 @@ GIT_DOTFILES="https://gitlab.com/squareboi104/dotfiles.git"
 GIT_YAY="https://aur.archlinux.org/yay.git"
 STOW_DOTFILES="alacritty fonts nvim tabliss wallpapers xprofile dunst icons neofetch qtile rofi urxvt xinitrc zshrc"
 
+# Start
+clear
+echo -e "Staritng...\n"
+
 # Get packages
 sudo pacman -Syu &&
-#sudo pacman -S fzf &&
-#VIDEO=$(echo -e "amd-gpu\nati\ndummy\nfbdev\nintel\nnouveau\nopenchrome\nqxl\nsisusb\nvesa\nvmware\nvoodoo" | fzf) # Select video card
 sudo pacman -S $PACKAGES &&
 
 # Get dotfiles and WM
@@ -31,7 +33,6 @@ git clone $GIT_YAY $HOME/yay && cd $HOME/yay/ && makepkg -si && rm -rf $HOME/yay
 yay -S pfetch
 
 # Config doas
-#wget -O doas.conf https://gitlab.com/squareboi104/arch-rice/-/raw/main/doas.conf
 sudo cp $HOME/arch-rice/doas.conf /etc/ &&
 
 # Change shell
