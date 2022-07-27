@@ -32,12 +32,12 @@ sudo chsh -s /usr/bin/zsh
 echo "permit persist :wheel"
 
 # Del files
-read -rp "Do you want to delete th WM config files? [Y/n]: " do
+read -rp "\nDo you want to delete th WM config files? [Y/n]: " do
 
-if [do == "y"]; then
+if [ do == "y" ]; then
     rm -rf $HOME/.dwm/
     echo "Deleting..."
-elif [do == "no"]; then
+elif [ do == "no" ]; then
     echo "Not deleting anyting."
 else
     rm -rf $HOME/.dwm/
