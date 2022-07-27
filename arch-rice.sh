@@ -26,7 +26,7 @@ git clone $GIT_YAY $HOME/yay && cd $HOME/yay/ && sudo makepkg -si && yay pfetch 
 
 # Change shell
 echo "Changing shell:"
-sudo chsh -s /usr/bin/zsh
+chsh -s /usr/bin/zsh
 
 # Del files
 read -rp "Do you want to delete th WM config files? [Y/n]: " do
