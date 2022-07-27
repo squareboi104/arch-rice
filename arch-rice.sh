@@ -24,9 +24,6 @@ git clone $GIT_DMENU $HOME/.dwm/dmenu && cd $HOME/.dwm/dmenu/ && sudo make clean
 git clone $GIT_DOTFILES $HOME/.dotfiles/ && cd $HOME/.dotfiles/ && stow $STOW_DOTFILES &&
 git clone $GIT_YAY $HOME/yay && cd $HOME/yay/ && makepkg -si && rm -rf $HOME/yay/ &&
 
-# Get yay packages
-yay pfetch &&
-
 # Config doas
 #wget -O doas.conf https://gitlab.com/squareboi104/arch-rice/-/raw/main/doas.conf
 sudo cp $HOME/arch-rice/doas.conf /etc/ &&
@@ -34,6 +31,9 @@ sudo cp $HOME/arch-rice/doas.conf /etc/ &&
 # Change shell
 echo "Changing shell"
 chsh -s /bin/zsh "$name" >/dev/null 2>&1 &&
+
+# Get yay packages
+yay pfetch
 
 # Del files
 read -p "\nDo you want to delete th WM config files? [Y/n]: " do
