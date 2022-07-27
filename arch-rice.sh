@@ -29,11 +29,11 @@ yay pfetch &&
 
 # Config doas
 #wget -O doas.conf https://gitlab.com/squareboi104/arch-rice/-/raw/main/doas.conf
-sudo cp $HOME/arch-rice/doas.conf /etc/
+sudo cp $HOME/arch-rice/doas.conf /etc/ &&
 
 # Change shell
-echo "Changing shell:"
-sudo chsh -s /bin/zsh &&
+echo "Changing shell"
+chsh -s /bin/zsh "$name" >/dev/null 2>&1 &&
 
 # Del files
 read -p "\nDo you want to delete th WM config files? [Y/n]: " do
