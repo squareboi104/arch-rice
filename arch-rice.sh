@@ -32,6 +32,9 @@ sudo cp $HOME/arch-rice/doas.conf /etc/ &&
 echo "Changing shell"
 chsh -s /bin/zsh "$name" >/dev/null 2>&1 &&
 
+# Virtualbox
+sudo mobprobe vboxdrv
+
 # Get yay packages
 yay pfetch
 
