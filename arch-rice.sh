@@ -2,7 +2,7 @@
 
 # Variables
 PACKAGES="base-devel xorg xorg-xinit doas vim xorg-drivers dunst neovim zsh stow exa zip unzip unclutter pcmanfm htop firefox gimp mpv zsh-syntax-highlighting sl virtualbox virtualbox-host-modules-arch pulseaudio pulsemixer lutris feh steam rxvt-unicode git"
-AUR_PACKAGES="pfetch"
+#AUR_PACKAGES="pfetch"
 GIT_DWM="https://gitlab.com/squareboi104/dwm.git"
 GIT_SLSTATUS="https://gitlab.com/squareboi104/slstatus.git"
 GIT_DMENU="https://git.suckless.org/dmenu"
@@ -22,20 +22,21 @@ git clone $GIT_DWM $HOME/.dwm/dwm && cd $HOME/.dwm/dwm/ && sudo make clean insta
 git clone $GIT_SLSTATUS $HOME/.dwm/slstatus && cd $HOME/.dwm/slstatus/ && sudo make clean install &&
 git clone $GIT_DMENU $HOME/.dwm/dmenu && cd $HOME/.dwm/dmenu/ && sudo make clean install &&
 git clone $GIT_DOTFILES $HOME/.dotfiles/ && cd $HOME/.dotfiles/ && stow $STOW_DOTFILES &&
-git clone $GIT_YAY $HOME/yay && cd $HOME/yay/ && makepkg -si && rm -rf $HOME/yay/
+git clone $GIT_YAY $HOME/yay && cd $HOME/yay/ && makepkg -si && rm -rf $HOME/yay/ &&
 
 # Get yay packages
-yay $(AUR_PACKAGES) 
+yay pfetch &&
 
 # Config doas
-sudo echo "permit persist :wheel" > /etc/doas.conf
+#wget -O doas.conf https://gitlab.com/squareboi104/arch-rice/-/raw/main/doas.conf
+sudo cp $HOME/arch-rice/doas.conf /etc/
 
 # Change shell
 echo "Changing shell:"
-sudo chsh -s /bin/zsh
+sudo chsh -s /bin/zsh &&
 
 # Del files
-read -rp "\nDo you want to delete th WM config files? [Y/n]: " do
+read -p "\nDo you want to delete th WM config files? [Y/n]: " do
 
 if [ do == "y" ]; then
     rm -rf $HOME/.dwm/
