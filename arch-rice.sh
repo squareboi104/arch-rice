@@ -30,7 +30,7 @@ sudo cp $HOME/arch-rice/doas.conf /etc/ &&
 
 # Change shell
 echo "Changing shell"
-chsh -s /bin/zsh "$name" >/dev/null 2>&1 &&
+chsh -s /bin/zsh >/dev/null 2>&1
 
 # Virtualbox
 sudo mobprobe vboxdrv
@@ -39,12 +39,12 @@ sudo mobprobe vboxdrv
 yay pfetch
 
 # Del files
-read -p "\nDo you want to delete th WM config files? [Y/n]: " do
+read -p "Do you want to delete th WM config files? [Y/n]: " do
 
 if [ do == "y" ]; then
     rm -rf $HOME/.dwm/
     echo "Deleting..."
-elif [ do == "no" ]; then
+elif [ do == "n" ]; then
     echo "Not deleting anyting."
 else
     rm -rf $HOME/.dwm/
