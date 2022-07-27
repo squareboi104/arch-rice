@@ -1,5 +1,8 @@
 #!/bin/sh
 
+# arch-rice
+# LICENSE: MIT
+
 # Variables
 PACKAGES="base-devel xorg xorg-xinit doas vim xorg-drivers dunst neovim zsh stow exa zip unzip unclutter pcmanfm htop firefox gimp mpv zsh-syntax-highlighting sl virtualbox virtualbox-host-modules-arch pulseaudio pulsemixer lutris feh steam rxvt-unicode git zathura"
 #AUR_PACKAGES="pfetch"
@@ -39,17 +42,16 @@ sudo modprobe vboxdrv
 yay -S pfetch
 
 # Del files
-read -p "Do you want to delete th WM config files? [Y/n]: " do
+read -p "Do you want to delete th WM config files? [y/N]: " do
 
-if [ $do == "y" ]; then
-    rm -rf $HOME/.dwm/
-    echo "Deleting..."
-elif [ $do == "n" ]; then
+if [ $do == "n" ]; then
     echo "Not deleting anyting."
-else
+elif [ $do == "y" ]; then
     rm -rf $HOME/.dwm/
     echo "Deleting..."
+else
+    echo "Not deleting anyting."
 fi
 
 # Finish
-echo -e "\nRebooting..." && sleep 5 && sudo reboot
+echo -e "\nRebooting..." && sleep 7 && sudo reboot
