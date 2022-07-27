@@ -1,7 +1,7 @@
 #!/bin/sh
 
 # arch-rice
-# LICENSE: MIT
+# License: GNU GPLv3
 
 # Variables
 PACKAGES="base-devel xorg xorg-xinit doas vim xorg-drivers dunst neovim zsh stow exa zip unzip unclutter pcmanfm htop firefox gimp mpv zsh-syntax-highlighting sl virtualbox virtualbox-host-modules-arch pulseaudio pulsemixer lutris feh steam rxvt-unicode git zathura"
