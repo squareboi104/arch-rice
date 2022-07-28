@@ -17,6 +17,10 @@ STOW_DOTFILES="alacritty fonts nvim tabliss wallpapers xprofile dunst icons neof
 clear
 echo -e "Staritng...\n"
 
+# Config pacman
+sudo rm -rf /etc/pacman.conf &&
+sudo cp $HOME/arch-rice/pacman.conf /etc/ &&
+
 # Get packages
 sudo pacman -Syu --noconfirm &&
 sudo pacman -S --noconfirm $PACKAGES &&
