@@ -18,8 +18,8 @@ clear
 echo -e "Staritng...\n"
 
 # Get packages
-sudo pacman -Syu --no-confirm &&
-sudo pacman -S --no-confirm $PACKAGES &&
+sudo pacman -Syu --noconfirm &&
+sudo pacman -S --noconfirm $PACKAGES &&
 
 # Get dotfiles and WM
 mkdir $HOME/.dwm/ &&
