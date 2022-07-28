@@ -18,8 +18,8 @@ clear
 echo -e "Staritng...\n"
 
 # Get packages
-sudo pacman -Syu &&
-sudo pacman -S $PACKAGES &&
+sudo pacman -Syu --no-confirm &&
+sudo pacman -S --no-confirm $PACKAGES &&
 
 # Get dotfiles and WM
 mkdir $HOME/.dwm/ &&
@@ -43,6 +43,7 @@ chsh -s /bin/zsh #>/dev/null 2>&1
 sudo modprobe vboxdrv
 
 # Del files
+echo ""
 read -p "Do you want to delete th WM config files? [y/N]: " do
 
 if [ $do == "n" ]; then
