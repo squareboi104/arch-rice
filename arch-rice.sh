@@ -6,10 +6,10 @@
 # Variables
 PACKAGES="base-devel xorg xorg-xinit doas vim xorg-drivers dunst neovim zsh stow exa zip unzip unclutter pcmanfm htop firefox gimp mpv zsh-syntax-highlighting sl virtualbox virtualbox-host-modules-arch pulseaudio pulsemixer lutris feh steam rxvt-unicode git zathura flameshot alsa-utils imagemagick openssh"
 #AUR_PACKAGES="pfetch"
-GIT_DWM="https://gitlab.com/squareboi104/dwm.git"
-GIT_SLSTATUS="https://gitlab.com/squareboi104/slstatus.git"
+GIT_DWM="https://github.com/squareboi104/dwm.git"
+GIT_SLSTATUS="https://github.com/squareboi104/slstatus.git"
 GIT_DMENU="https://git.suckless.org/dmenu"
-GIT_DOTFILES="https://gitlab.com/squareboi104/dotfiles.git"
+GIT_DOTFILES="https://github.com/squareboi104/dotfiles.git"
 GIT_YAY="https://aur.archlinux.org/yay.git"
 STOW_DOTFILES="alacritty fonts nvim tabliss wallpapers xprofile dunst icons neofetch qtile rofi urxvt xinitrc 
 rc"
@@ -51,9 +51,9 @@ sudo modprobe vboxdrv
 echo ""
 read -p "Do you want to delete th WM config files? [y/N]: " do
 
-if [ $do == "n" ]; then
+if [[ $do == "n" ]]; then
     echo "Not deleting anyting."
-elif [ $do == "y" ]; then
+elif [[ $do == "y" ]]; then
     rm -rf $HOME/.dwm/
     echo "Deleting..."
 else
