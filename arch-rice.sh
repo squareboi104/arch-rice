@@ -11,8 +11,7 @@ GIT_SLSTATUS="https://github.com/squareboi104/slstatus.git"
 GIT_DMENU="https://git.suckless.org/dmenu"
 GIT_DOTFILES="https://github.com/squareboi104/dotfiles.git"
 GIT_YAY="https://aur.archlinux.org/yay.git"
-STOW_DOTFILES="alacritty fonts nvim tabliss wallpapers xprofile dunst icons neofetch qtile rofi urxvt xinitrc 
-rc"
+STOW_DOTFILES="alacritty fonts nvim tabliss wallpapers xprofile dunst icons neofetch qtile rofi urxvt xinitrc zshrc"
 
 # Start
 clear
