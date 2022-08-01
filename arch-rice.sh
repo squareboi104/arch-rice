@@ -47,7 +47,7 @@ chsh -s /bin/zsh #>/dev/null 2>&1
 pip3 install -U jedi-languaje-server
 
 # Node.js coc.nvim
-nvim -c "CocInstall -sync coc-jedi coc-sh"
+#nvim -c "CocInstall -sync coc-jedi coc-sh"
 
 # Virtualbox
 sudo modprobe vboxdrv
