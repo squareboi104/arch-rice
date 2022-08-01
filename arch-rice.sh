@@ -4,7 +4,7 @@
 # License: MIT
 
 # Variables
-PACKAGES="base-devel xorg xorg-xinit doas vim xorg-drivers dunst neovim zsh stow exa zip unzip unclutter pcmanfm htop firefox gimp mpv zsh-syntax-highlighting sl virtualbox virtualbox-host-modules-arch pulseaudio pulsemixer lutris feh steam rxvt-unicode git zathura flameshot alsa-utils imagemagick openssh nodejs python3"
+PACKAGES="base-devel xorg xorg-xinit doas vim xorg-drivers dunst neovim zsh stow exa zip unzip unclutter pcmanfm htop firefox gimp mpv zsh-syntax-highlighting sl virtualbox virtualbox-host-modules-arch pulseaudio pulsemixer lutris feh steam rxvt-unicode git zathura flameshot alsa-utils imagemagick openssh nodejs python3 python-pip"
 #AUR_PACKAGES="pfetch"
 GIT_DWM="https://github.com/squareboi104/dwm.git"
 GIT_SLSTATUS="https://github.com/squareboi104/slstatus.git"
@@ -44,7 +44,7 @@ echo "Changing shell"
 chsh -s /bin/zsh #>/dev/null 2>&1
 
 # Python
-pip3 install jedi-languaje-server
+pip3 install -U jedi-languaje-server
 
 # Node.js coc.nvim
 nvim -c "CocInstall -sync coc-jedi coc-sh"
