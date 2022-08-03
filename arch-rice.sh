@@ -4,7 +4,7 @@
 # License: MIT
 
 # Variables
-PACKAGES="base-devel xorg xorg-xinit doas vim xorg-drivers dunst neovim zsh stow exa zip unzip unclutter pcmanfm htop firefox gimp mpv zsh-syntax-highlighting sl virtualbox virtualbox-host-modules-arch pulseaudio pulsemixer lutris feh steam rxvt-unicode git zathura flameshot alsa-utils imagemagick openssh nodejs python3 python-pip"
+PACKAGES="base-devel xorg xorg-xinit doas vim xorg-drivers dunst neovim zsh stow exa zip unzip unclutter pcmanfm htop firefox gimp mpv zsh-syntax-highlighting sl virtualbox virtualbox-host-modules-arch pulseaudio pulsemixer lutris feh steam rxvt-unicode git zathura flameshot alsa-utils imagemagick openssh nodejs python3 python-pip ttf-liberation"
 #AUR_PACKAGES="pfetch"
 GIT_DWM="https://github.com/squareboi104/dwm.git"
 GIT_SLSTATUS="https://github.com/squareboi104/slstatus.git"
