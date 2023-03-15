@@ -50,7 +50,7 @@ chsh -s /bin/zsh #>/dev/null 2>&1
 #nvim -c "CocInstall -sync coc-jedi coc-sh"
 
 # Virtualbox
-sudo modprobe vboxdrv
+#sudo modprobe vboxdrv
 
 # Del files
 echo ""
